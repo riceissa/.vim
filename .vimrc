@@ -22,7 +22,7 @@ set modelines=0
     " Leader mappings
         let mapleader=','
         let localleader = '\\'
-        nnoremap <silent> <leader><leader> :nohlsearch<CR>
+        nnoremap <silent> <leader>nh :nohlsearch<CR>
         nnoremap <silent> <leader>I :set list!<CR>
         nnoremap <silent> <leader>N :set number!<CR>
         nnoremap <leader>p :set paste! paste?<CR>
@@ -76,7 +76,8 @@ set modelines=0
     let g:tex_flavor='latex'
     augroup filetype_tex
         autocmd!
-        autocmd filetype tex nnoremap <buffer> <silent> <localleader>la :!latexmk -pdf %<CR>
+        autocmd filetype tex nnoremap <buffer> <silent> <localleader><localleader> :!latexmk -pdf %<CR>
+        autocmd filetype tex nnoremap <buffer> <silent> <localleader>la :!pdflatex %<CR>
         autocmd filetype tex nnoremap <buffer> <silent> <localleader>xe :!xelatex %<CR>
     augroup END
 " Plugins
@@ -89,4 +90,3 @@ set modelines=0
     iabbrev het the
     iabbrev tehn then
     iabbrev waht what
-let g:tex_verbspell= 1
