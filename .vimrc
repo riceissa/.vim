@@ -72,6 +72,11 @@ set modelines=0
         autocmd filetype xhtml setlocal shiftwidth=2 softtabstop=2 tabstop=2
         autocmd filetype xml setlocal shiftwidth=2 softtabstop=2 tabstop=2
     augroup END
+" Markdown options
+    augroup filetype_markdown
+        autocmd!
+        autocmd filetype markdown nnoremap <buffer> <silent> <localleader><localleader> :!markdown % > %.html<CR><CR>
+    augroup END
 " LaTeX options
     let g:tex_flavor='latex'
     augroup filetype_tex
