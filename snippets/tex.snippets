@@ -35,41 +35,55 @@ snippet fn
 	\footnote{${1}}${2}
 # Axiom
 snippet ax
-	\begin{ax}[${1:name}]\label{${2:$1}}
+	\begin{ax}[${1}]%\label{${2:ax:}}
 	${3}
 	\end{ax}
 # Corollary
 snippet cor
-	\begin{cor}[${1:name}]\label{${2:$1}}
+	\begin{cor}[${1}]%\label{${2:cor:}}
 	${3}
 	\end{cor}
 # Definition
 snippet defn
-	\begin{defn}[${1:name}]\label{${2:$1}}
+	\begin{defn}[${1}]%\label{${2:defn:}}
 	${3}
 	\end{defn}
 # Example
 snippet ex
-	\begin{ex}[${1:name}]\label{${2:$1}}
+	\begin{ex}[${1}]%\label{${2:ex:}}
 	${3}
 	\end{ex}
 # Lemma
 snippet lemma
-	\begin{lemma}[${1:name}]\label{${2:$1}}
+	\begin{lemma}[${1}]%\label{${2:lemma:}}
 	${3}
 	\end{lemma}
 # Proposition
 snippet prop
-	\begin{prop}[${1:name}]\label{${2:$1}}
+	\begin{prop}[${1}]%\label{${2:prop:}}
 	${3}
 	\end{prop}
 # Remark
-snippet rem
-	\begin{rem}[${1:name}]\label{${2:$1}}
+snippet remark
+	\begin{remark}[${1}]%\label{${2:remark:}}
 	${3}
-	\end{rem}
+	\end{remark}
 # Proof
 snippet proof
 	\begin{proof}
 	${2}
 	\end{proof}
+# Source code
+snippet code
+	\begin{lstlisting}[language=${1:name}]
+	${2}
+	\end{lstlisting}
+# References
+snippet ref
+	\ref{${1}}${2}
+snippet label
+	\label{${1}}${1}
+snippet cref
+	\cref{${1}}${2}
+snippet Cref
+	\Cref{${1}}${2}
