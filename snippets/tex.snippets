@@ -6,6 +6,16 @@ snippet mal
 	\[
 	${1}
 	\]
+# Section
+snippet sec
+	\section{${1}}
+	%\label{${2:$1}}
+	${3}
+# Subsection
+snippet sub
+	\subsection{${1}}
+	%label{${2:$1}}
+	${3}
 # Emphasis
 snippet em
 	\emph{${1}}${2}
@@ -15,6 +25,11 @@ snippet st
 # Term
 snippet term
 	\term{${1}}${2}
+# Quotes
+snippet quote
+	\begin{quote}
+	${1}
+	\end{quote}
 # Bold
 snippet bf
 	\textbf{${1}}${2}
@@ -32,46 +47,59 @@ snippet ...
 	\ldots
 # Footnote
 snippet fn
-	\footnote{${1}}${2}
+	%
+	%
+	%
+	\footnote{${1}}
+	%
+	%
+	
 # Axiom
 snippet ax
-	\begin{ax}[${1}]%\label{${2:ax:}}
+	\begin{ax}[${1}]
+	%\label{${2:ax:}}
 	${3}
 	\end{ax}
 # Corollary
 snippet cor
-	\begin{cor}[${1}]%\label{${2:cor:}}
+	\begin{cor}[${1}]
+	%\label{${2:cor:}}
 	${3}
 	\end{cor}
 # Definition
 snippet defn
-	\begin{defn}[${1}]%\label{${2:defn:}}
+	\begin{defn}[${1}]
+	%\label{${2:defn:}}
 	${3}
 	\end{defn}
 # Example
 snippet ex
-	\begin{ex}[${1}]%\label{${2:ex:}}
+	\begin{ex}[${1}]
+	%\label{${2:ex:}}
 	${3}
 	\end{ex}
 # Lemma
 snippet lemma
-	\begin{lemma}[${1}]%\label{${2:lemma:}}
+	\begin{lemma}[${1}]
+	%\label{${2:lemma:}}
 	${3}
 	\end{lemma}
 # Proposition
 snippet prop
-	\begin{prop}[${1}]%\label{${2:prop:}}
+	\begin{prop}[${1}]
+	%\label{${2:prop:}}
 	${3}
 	\end{prop}
 # Remark
 snippet remark
-	\begin{remark}[${1}]%\label{${2:remark:}}
+	\begin{remark}[${1}]
+	%\label{${2:remark:}}
 	${3}
 	\end{remark}
 # Proof
 snippet proof
 	\begin{proof}
-	${2}
+	${1}
 	\end{proof}
 # Source code
 snippet code
