@@ -1,3 +1,141 @@
+# In-line maths
+snippet ma
+	\(${1}\)${2}
+# Display maths
+snippet mal
+	\[
+	${1}
+	\]
+# Section
+snippet sec
+	\section{${1}}
+	%\label{${2}}
+	${3}
+# Subsection
+snippet sub
+	\subsection{${1}}
+	%label{${2}}
+	${3}
+# Subsubsection
+snippet subs
+	\subsubsection{${1}}
+	%\label{${2}}
+	${3}
+# Paragraph
+snippet par
+	\paragraph{${1}}
+	%\label{${2}}
+	${3}
+# Sub Paragraph
+snippet subp
+	\subparagraph{${1}}
+	\label{${2}}
+	${3}
+# Emphasis
+snippet em
+	\emph{${1}}${2}
+# Strong
+snippet st
+	\strong{${1}}${2}
+# Term
+snippet term
+	\term{${1}}${2}
+# Quotes
+snippet quote
+	\begin{quote}
+	${1}
+	\end{quote}
+# Bold
+snippet bf
+	\textbf{${1}}${2}
+# Italicized
+snippet it
+	\textit{${1}}${2}
+# Underline
+snippet ul
+	\ul{${1}}${2}
+# Small caps
+snippet sc
+	\textsc{$1}${2}
+# Ellipses
+snippet ...
+	\ldots
+# Footnote
+snippet fn
+	%
+	%
+	%
+	\footnote{${1}}
+	%
+	%
+	
+# Axiom
+snippet ax
+	\begin{ax}[${1}]
+	%\label{${2:ax:}}
+	${3}
+	\end{ax}
+# Corollary
+snippet cor
+	\begin{cor}[${1}]
+	%\label{${2:cor:}}
+	${3}
+	\end{cor}
+# Definition
+snippet defn
+	\begin{defn}[${1}]
+	%\label{${2:defn:}}
+	${3}
+	\end{defn}
+# Example
+snippet ex
+	\begin{ex}[${1}]
+	%\label{${2:ex:}}
+	${3}
+	\end{ex}
+# Lemma
+snippet lemma
+	\begin{lemma}[${1}]
+	%\label{${2:lemma:}}
+	${3}
+	\end{lemma}
+# Note
+snippet note
+	\begin{note}[${1}]
+	%\label{${2}}
+	${3}
+	\end{note}
+# Proposition
+snippet prop
+	\begin{prop}[${1}]
+	%\label{${2:prop:}}
+	${3}
+	\end{prop}
+# Remark
+snippet remark
+	\begin{remark}[${1}]
+	%\label{${2:remark:}}
+	${3}
+	\end{remark}
+# Proof
+snippet proof
+	\begin{proof}
+	${1}
+	\end{proof}
+# Source code
+snippet code
+	\begin{lstlisting}[language=${1:name}]
+	${2}
+	\end{lstlisting}
+# References
+snippet ref
+	\ref{${1}}${2}
+snippet label
+	\label{${1}}${1}
+snippet cref
+	\cref{${1}}${2}
+snippet Cref
+	\Cref{${1}}${2}
 # \begin{}...\end{}
 snippet begin
 	\begin{${1:env}}
@@ -23,11 +161,6 @@ snippet eq
 	\begin{equation}
 		${1}
 	\end{equation}
-# Unnumbered Equation
-snippet \
-	\\[
-		${1}
-	\\]
 # Enumerate
 snippet enum
 	\begin{enumerate}
@@ -67,40 +200,9 @@ snippet part
 	% part $2 (end)
 # Chapter
 snippet cha
-	\chapter{${1:chapter name}} % (fold)
-	\label{cha:${2:$1}}
+	\chapter{${1}}
+	%\label{cha:${2}}
 	${3}
-	% chapter $2 (end)
-# Section
-snippet sec
-	\section{${1:section name}} % (fold)
-	\label{sec:${2:$1}}
-	${3}
-	% section $2 (end)
-# Sub Section
-snippet sub
-	\subsection{${1:subsection name}} % (fold)
-	\label{sub:${2:$1}}
-	${3}
-	% subsection $2 (end)
-# Sub Sub Section
-snippet subs
-	\subsubsection{${1:subsubsection name}} % (fold)
-	\label{ssub:${2:$1}}
-	${3}
-	% subsubsection $2 (end)
-# Paragraph
-snippet par
-	\paragraph{${1:paragraph name}} % (fold)
-	\label{par:${2:$1}}
-	${3}
-	% paragraph $2 (end)
-# Sub Paragraph
-snippet subp
-	\subparagraph{${1:subparagraph name}} % (fold)
-	\label{subp:${2:$1}}
-	${3}
-	% subparagraph $2 (end)
 snippet itd
 	\item[${1:description}] ${2:item}
 snippet figure
