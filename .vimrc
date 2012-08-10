@@ -34,6 +34,7 @@ set modelines=0
         nnoremap <leader>u :GundoToggle<CR>
         nnoremap <leader>" viw<Esc>a"<Esc>hbi"<Esc>lel
         nnoremap <leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
+        nnoremap <leader>m i\(<Esc>Ea\)<Esc>
     " Scrolling
         nnoremap <Space> <C-f>
         nnoremap - <C-b>
