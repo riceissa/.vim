@@ -60,15 +60,6 @@ snippet sc
 # Ellipses
 snippet ...
 	\ldots
-# Footnote
-snippet fn
-	%
-	%
-	%
-	\footnote{${1}}
-	%
-	%
-	
 # Source code
 snippet code
 	\begin{lstlisting}[language=${1:name}]
@@ -118,6 +109,9 @@ snippet item
 	\begin{itemize}
 		\item ${1}
 	\end{itemize}
+# Item
+snippet i
+	\item ${1}
 # Description
 snippet desc
 	\begin{description}
@@ -166,70 +160,70 @@ snippet page
 # Environments for AMSMath
 # Axiom
 snippet ax
-	\begin{ax}[${1}]
-	%\label{${2}}
-	${3}
-	\end{ax}
+	\begin{axiom}
+	%\label{${1}}
+	${2}
+	\end{axiom}
 # Corollary
 snippet cor
-	\begin{cor}[${1}]
-	%\label{${2}}
-	${3}
-	\end{cor}
+	\begin{corollary}
+	%\label{${1}}
+	${2}
+	\end{corollary}
 # Definition
 snippet defn
-	\begin{defn}[${1}]
-	%\label{${2}}
-	${3}
-	\end{defn}
+	\begin{definition}
+	%\label{${1}}
+	${2}
+	\end{definition}
 # Discussion
 snippet di
-	\begin{di}[${1}]
-	%\label{${2}}
-	${3}
-	\end{di}
+	\begin{discussion}
+	%\label{${1}}
+	${2}
+	\end{discussion}
 # Example
 snippet ex
-	\begin{ex}[${1}]
-	%\label{${2}}
-	${3}
-	\end{ex}
+	\begin{example}
+	%\label{${1}}
+	${2}
+	\end{example}
 # Exercise
 snippet exer
-	\begin{exer}[${1}]
-	%\label{${2}}
-	${3}
-	\end{exer}
+	\begin{exercise}
+	%\label{${1}}
+	${2}
+	\end{exercise}
 # Lemma
-snippet lemma
-	\begin{lemma}[${1}]
-	%\label{${2}}
-	${3}
+snippet lem
+	\begin{lemma}
+	%\label{${1}}
+	${2}
 	\end{lemma}
 # Note
 snippet note
-	\begin{note}[${1}]
-	%\label{${2}}
-	${3}
+	\begin{note}
+	%\label{${1}}
+	${2}
 	\end{note}
 # Proposition
 snippet prop
-	\begin{prop}[${1}]
-	%\label{${2}}
-	${3}
-	\end{prop}
+	\begin{proposition}
+	%\label{${1}}
+	${2}
+	\end{proposition}
 # Remark
 snippet remark
-	\begin{remark}[${1}]
-	%\label{${2}}
-	${3}
+	\begin{remark}
+	%\label{${1}}
+	${2}
 	\end{remark}
 # Theorem
 snippet thm
-	\begin{thm}[${1}]
-	%\label{${2}}
-	${3}
-	\end{thm}
+	\begin{theorem}
+	%\label{${1}}
+	${2}
+	\end{theorem}
 # Proof
 snippet proof
 	\begin{proof}
