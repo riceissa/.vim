@@ -20,7 +20,7 @@ set modelines=0
     set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 " Custom user mappings
     " Leader mappings
-        let mapleader=','
+        let mapleader=' '
         let localleader = '\\'
         nnoremap <silent> <leader>nh :nohlsearch<CR>
         nnoremap <silent> <leader>I :set list!<CR>
@@ -36,8 +36,8 @@ set modelines=0
         nnoremap <leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
         nnoremap <leader>m i\(<Esc>Ea\)<Esc>
     " Scrolling
-        nnoremap <Space> <C-f>
-        nnoremap - <C-b>
+        nnoremap - <C-f>
+        nnoremap _ <C-b>
     " Windows
         nnoremap <C-h> <C-w>h
         nnoremap <C-j> <C-w>j
