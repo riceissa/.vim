@@ -47,8 +47,8 @@ set modelines=0
         nnoremap <silent> <C-t> :tabnew<CR>
         nnoremap <silent> <C-n> :tabn<CR>
         nnoremap <silent> <C-p> :tabp<CR>
-    inoremap jk <Esc>
-    inoremap kj <Esc>
+    inoremap jj <Esc>
+    inoremap kk <Esc>
     nnoremap j gj
     nnoremap k gk
     vnoremap j gj
