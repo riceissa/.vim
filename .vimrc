@@ -35,9 +35,7 @@ set modelines=0
         nnoremap <leader>" viw<Esc>a"<Esc>hbi"<Esc>lel
         nnoremap <leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
         nnoremap <leader>m i\(<Esc>Ea\)<Esc>
-    " Scrolling
-        nnoremap - <C-f>
-        nnoremap _ <C-b>
+        nnoremap _ :bp<CR>
     " Windows
         nnoremap <C-h> <C-w>h
         nnoremap <C-j> <C-w>j
