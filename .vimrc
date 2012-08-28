@@ -47,18 +47,14 @@ set modelines=0
         nnoremap <silent> <C-t> :tabnew<CR>
         nnoremap <silent> <C-n> :tabn<CR>
         nnoremap <silent> <C-p> :tabp<CR>
-    inoremap jj <Esc>
-    inoremap kk <Esc>
     inoremap jk <Esc>
     inoremap kj <Esc>
     nnoremap j gj
     nnoremap k gk
-    nnoremap H ^
-    nnoremap L $
+    vnoremap j gj
+    vnoremap k gk
     nnoremap <Enter> o<Esc>
     nnoremap <silent> K :bn<CR>
-    inoremap <C-u> <Esc>viwUea
-    nnoremap <C-u> viwU
     onoremap p i(
     onoremap in( :<C-u>normal! f(vi(<CR>
     onoremap il( :<C-u>normal! F)vi(<CR>
