@@ -37,9 +37,9 @@ snippet em
 # Strong
 snippet st
 	\strong{${1}}${2}
-# Term
-snippet term
-	\term{${1}}${2}
+# Definiendum
+snippet d
+	\definiendum{${1}}${2}
 # Quotes
 snippet qu
 	\begin{quote}
@@ -71,18 +71,14 @@ snippet ...
 	\ldots
 # Source code using the ``listings'' package
 snippet co
-	\lstinline%
-	%[language=${1}]%
-	${2}
+	\lstinline[language=${1}]!${2}!${3}
 snippet col
-	\begin{lstlisting}%
-	%[language=${1}]%
+	\begin{lstlisting}[language=${1}]
 	${2}
 	\end{lstlisting}
+	${3}
 snippet cof
-	\lstinputlisting%
-	%[language=${1}]%
-	{${2:filename.ext}}
+	\lstinputlisting[language=${1}]{${2:filename.ext}}
 # References
 snippet ref
 	\ref{${1}}${2}
