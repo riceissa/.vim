@@ -51,6 +51,8 @@ set modelines=0
     nnoremap k gk
     vnoremap j gj
     vnoremap k gk
+    nnoremap Y y$
+    nnoremap Q @@
     nnoremap <Enter> o<Esc>
     nnoremap <silent> K :bn<CR>
     onoremap p i(
@@ -60,6 +62,10 @@ set modelines=0
     set backspace=indent,eol,start cmdheight=2 encoding=utf-8 gdefault
     set hidden nospell number ruler scrolloff=5 shiftround showcmd
     set showmode spellfile=~/.spell.en.add title ttyfast wildmenu wrap
+    augroup paste
+        autocmd!
+        au InsertLeave * set nopaste
+    augroup END
 " HTML options
     augroup filetype_html
         autocmd!
