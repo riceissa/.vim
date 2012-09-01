@@ -26,7 +26,27 @@ set modelines=0
         nnoremap <silent> <leader>I :set list!<CR>
         nnoremap <silent> <leader>N :set number!<CR>
         nnoremap <leader>p :set paste! paste?<CR>
-        nnoremap <leader>sp :set spell! spell?<CR>
+        function ToggleSpell()
+            if &spell ==# "nospell"
+                syntax off
+                set spell
+            else
+                set nospell
+                syntax on
+            endif
+        endfunction
+            " for some reason, the above works, but this one doesn't
+        "function ToggleSpell()
+            "if &spell ==# "  spell"
+                "set nospell
+                "syntax on
+            "else
+                "syntax off
+                "set spell
+            "endif
+        "endfunction
+        nnoremap <leader>sp :call ToggleSpell()<CR>
+        "nnoremap <leader>sp :set spell! spell?<CR>
         nnoremap <leader>W :set wrap! wrap?<CR>
         nnoremap <silent> <leader>ev :tabnew $MYVIMRC<CR>
         nnoremap <leader>sv :source $MYVIMRC<CR>
@@ -96,3 +116,4 @@ set modelines=0
     iabbrev het the
     iabbrev tehn then
     iabbrev waht what
+set background=light
