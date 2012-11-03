@@ -30,14 +30,16 @@ set modelines=0
             if &spell ==# "nospell"
                 syntax off
                 set spell
+                echom "spelling on"
             else
                 set nospell
                 syntax on
+                echom "spelling off"
             endif
         endfunction
             " for some reason, the above works, but this one doesn't
         "function ToggleSpell()
-            "if &spell ==# "  spell"
+            "if &spell ==# "spell"
                 "set nospell
                 "syntax on
             "else
