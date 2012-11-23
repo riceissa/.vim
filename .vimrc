@@ -40,7 +40,7 @@ set modelines=0
         " For some reason, the above works, but this one doesn't (even
         " when the string below is changed to just "spell").
         "function ToggleSpell()
-            "if &spell ==# "  spell"
+            "if &spell ==# "spell"
                 "set nospell
                 "syntax on
                 "echom "spelling was on ... turning off"
