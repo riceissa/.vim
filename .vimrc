@@ -30,23 +30,35 @@ set modelines=0
             if &spell ==# "nospell"
                 syntax off
                 set spell
-                echom "spelling on"
+                echom "spelling is now on; syntax disabled"
             else
                 set nospell
                 syntax on
-                echom "spelling off"
+                echom "spelling is now off; syntax enabled"
             endif
         endfunction
-            " for some reason, the above works, but this one doesn't
+        " For some reason, the above works, but this one doesn't (even
+        " when the string below is changed to just "spell").
         "function ToggleSpell()
             "if &spell ==# "spell"
                 "set nospell
                 "syntax on
+                "echom "spelling was on ... turning off"
             "else
                 "syntax off
                 "set spell
+                "echom "spelling was off ... turning on"
             "endif
         "endfunction
+        function ToggleTextWidth()
+            if &textwidth ==# 0
+                set textwidth=72
+                echom "textwidth is now 72"
+            else
+                set textwidth=0
+                echom "textwidth is now 0"
+            endif
+        endfunction
         nnoremap <leader>sp :call ToggleSpell()<CR>
         "nnoremap <leader>sp :set spell! spell?<CR>
         nnoremap <leader>W :set wrap! wrap?<CR>
@@ -58,6 +70,7 @@ set modelines=0
         nnoremap <leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
         nnoremap <leader>m i\(<Esc>Ea\)<Esc>
         nnoremap _ :bp<CR>
+        nnoremap <leader>T :call ToggleTextWidth()<CR>
     " Windows
         nnoremap <C-h> <C-w>h
         nnoremap <C-j> <C-w>j
@@ -116,6 +129,8 @@ set modelines=0
     iabbrev nad and
     iabbrev teh the
     iabbrev het the
+    iabbrev ehty they
+    iabbrev hety they
     iabbrev tehn then
     iabbrev waht what
 set background=light
