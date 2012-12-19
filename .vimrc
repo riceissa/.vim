@@ -134,3 +134,7 @@ set modelines=0
     iabbrev tehn then
     iabbrev waht what
 set background=light
+" Hit `Ctrl-k` then type `el` to produce an ellipsis
+    dig el 8230
+" Type `:Clip` to load the current file into the clipboard
+    command Clip :!cat % | xclip -sel clip
