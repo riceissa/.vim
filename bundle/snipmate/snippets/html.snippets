@@ -10,11 +10,16 @@ snippet bf
 snippet em
 	<em>${1}</em>${2}
 # Blockquote
+snippet bq
+	<blockquote>${1}</blockquote>${2}
 snippet quote
 	<blockquote>${1}</blockquote>${2}
 # href
 snippet href
 	<a href="${1:url}">${2:text}</a>${3}
+# p
+snippet p
+	<p${1}>${2}</p>${3}
 # Double quotes
 snippet ``
 	&ldquo;${1}&rdquo;
@@ -225,4 +230,16 @@ snippet table
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
 snippet tag
-	<${1:name}${2}>${3}</$1>
+	<${1:name}${2}>${3}</$1>${4}
+snippet header
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>${1:title}</title>
+	</head>
+	<body>
+		<h1>$1</h1>
+		${3}
+	</body>
+	</html>
