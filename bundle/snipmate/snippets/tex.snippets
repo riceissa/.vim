@@ -1,13 +1,13 @@
-# For dialogue
+## For dialogue
 snippet sp
 	\speaks{${1}}{${2}}${3}
-# href
+## href
 snippet href
 	\href{${1:url}}{${2:text}}
-# In-line maths
+## In-line maths
 snippet ma
 	\(${1}\)${2}
-# Display maths
+## Display maths
 snippet mal
 	\[
 	${1}
@@ -20,8 +20,7 @@ snippet mrm
 	\mathrm{${1}}${2}
 snippet text
 	\text{${1}}${2}
-snippet 
-# Section
+## Section
 snippet sec
 	\section{${1}}
 	%\label{${2}}
@@ -65,7 +64,7 @@ snippet quotation
 	${1}
 	\end{quotation}
 # Verse
-snippet ver
+snippet verse
 	\begin{verse}
 	${1}
 	\end{verse}
@@ -97,7 +96,7 @@ snippet cof
 snippet ref
 	\ref{${1}}${2}
 snippet label
-	\label{${1}}${1}
+	\label{${1}}${2}
 snippet cref
 	\cref{${1}}${2}
 snippet Cref
@@ -108,19 +107,19 @@ snippet begin
 	${2}
 	\end{$1}
 # Table and tabular combined
-snippet table
-	\begin{table}[H]
-	\centering
-	\caption{${1}}
-	\begin{tabular}{|${2}|}
-	${3}
-	\end{tabular}
-	\end{table}
-snippet figure
-	\begin{figure}[H]
-	\caption{${1}}
-	${2}
-	\end{figure}
+#snippet table
+#	\begin{table}[H]
+#	\centering
+#	\caption{${1}}
+#	\begin{tabular}{|${2}|}
+#	${3}
+#	\end{tabular}
+#	\end{table}
+#snippet figure
+#	\begin{figure}[H]
+#	\caption{${1}}
+#	${2}
+#	\end{figure}
 # Align(ed)
 snippet ali
 	\begin{align${1:ed}}
