@@ -18,6 +18,9 @@ snippet msf
 	\mathsf{${1}}${2}
 snippet mrm
 	\mathrm{${1}}${2}
+snippet text
+	\text{${1}}${2}
+snippet 
 # Section
 snippet sec
 	\section{${1}}
@@ -53,11 +56,11 @@ snippet st
 snippet d
 	\definiendum{${1}}${2}
 # Quotes
-snippet qu
+snippet quote
 	\begin{quote}
 	${1}
 	\end{quote}
-snippet qul
+snippet quotation
 	\begin{quotation}
 	${1}
 	\end{quotation}
@@ -104,16 +107,30 @@ snippet begin
 	\begin{${1:env}}
 	${2}
 	\end{$1}
-# Tabular
-snippet tab
-	\begin{${1:tabular}}{${2:c}}
+# Table and tabular combined
+snippet table
+	\begin{table}[H]
+	\centering
+	\caption{${1}}
+	\begin{tabular}{|${2}|}
 	${3}
-	\end{$1}
+	\end{tabular}
+	\end{table}
+snippet figure
+	\begin{figure}[H]
+	\caption{${1}}
+	${2}
+	\end{figure}
 # Align(ed)
 snippet ali
 	\begin{align${1:ed}}
 	${2}
 	\end{align$1}
+# align*
+snippet align
+	\begin{align*}
+	${1}
+	\end{align*}
 # Gather(ed)
 snippet gat
 	\begin{gather${1:ed}}
@@ -156,7 +173,7 @@ snippet cas
 # Split
 snippet spl
 	\begin{split}
-		${1}
+	${1}
 	\end{split}
 # Part
 snippet part
@@ -171,10 +188,6 @@ snippet cha
 	${3}
 snippet itd
 	\item[${1:description}] ${2:item}
-snippet figure
-	${1:Figure}~\ref{${2:fig:}}${3}
-snippet table
-	${1:Table}~\ref{${2:tab:}}${3}
 snippet listing
 	${1:Listing}~\ref{${2:list}}${3}
 snippet section
