@@ -120,6 +120,14 @@ set modelines=0
         autocmd filetype tex nnoremap <buffer> <silent> <localleader><localleader> :!latexmk -pdf %<CR>
         autocmd filetype tex nnoremap <buffer> <silent> <localleader>la :!pdflatex %<CR>
         autocmd filetype tex nnoremap <buffer> <silent> <localleader>xe :!xelatex %<CR>
+        autocmd filetype tex nnoremap <buffer> <silent> <localleader>ja :!platex % ; dvipdfmx -f /usr/share/texlive/texmf-dist/fonts/map/dvipdfmx/jfontmaps/otf-ipaex.map %:r.dvi<CR>
+    augroup END
+" Markdown options
+    au BufNewFile,BufRead *.md set filetype=markdown
+        " Interpret `.md` files as Markdown
+    augroup filetype_markdown
+        autocmd!
+        autocmd filetype markdown nnoremap <buffer> <silent> <localleader><localleader> :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.html --toc --mathjax %<CR><CR>
     augroup END
 " Plugins
     " EasyMotion
