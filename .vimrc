@@ -86,6 +86,10 @@ set modelines=0
     nnoremap k gk
     vnoremap j gj
     vnoremap k gk
+    nnoremap gj j
+    nnoremap gk k
+    vnoremap gj j
+    vnoremap gk k
     nnoremap Y y$
     nnoremap Q @@
     nnoremap <Enter> o<Esc>
