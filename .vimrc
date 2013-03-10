@@ -130,8 +130,8 @@ set modelines=0
         autocmd filetype markdown nnoremap <buffer> <silent> <localleader><localleader> :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --toc --mathjax --variable math=true %<CR><CR>
         autocmd filetype markdown nnoremap <buffer> <silent> <localleader>tm :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --toc --mathjax --variable math=true %<CR><CR>
         autocmd filetype markdown nnoremap <buffer> <silent> <localleader>nm :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --mathjax --variable math=true %<CR><CR>
-        autocmd filetype markdown nnoremap <buffer> <silent> <localleader>tn :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --toc --mathjax %<CR><CR>
-        autocmd filetype markdown nnoremap <buffer> <silent> <localleader>nn :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --mathjax %<CR><CR>
+        autocmd filetype markdown nnoremap <buffer> <silent> <localleader>tn :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --toc %<CR><CR>
+        autocmd filetype markdown nnoremap <buffer> <silent> <localleader>nn :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt %<CR><CR>
     augroup END
 " Plugins
     " EasyMotion
