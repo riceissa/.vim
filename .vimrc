@@ -127,7 +127,10 @@ set modelines=0
         " Interpret `.md` files as Markdown
     augroup filetype_markdown
         autocmd!
-        autocmd filetype markdown nnoremap <buffer> <silent> <localleader><localleader> :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.html --toc --mathjax %<CR><CR>
+        autocmd filetype markdown nnoremap <buffer> <silent> <localleader><localleader> :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --toc --mathjax %<CR><CR>
+        autocmd filetype markdown command Ctoc :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --toc --mathjax --variable math%<CR><CR>
+        autocmd filetype markdown command Cnotoc :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --mathjax --variable math%<CR><CR>
+        autocmd filetype markdown command Cnotocnomath :!pandoc -o %:r.html --template=/home/issa/projects/riceissa.bitbucket.org/template.txt --mathjax %<CR><CR>
     augroup END
 " Plugins
     " EasyMotion
