@@ -141,6 +141,12 @@ set modelines=0
     iabbrev hety they
     iabbrev tehn then
     iabbrev waht what
+    iabbrev THen Then
+    iabbrev THe The
+    iabbrev ANd And
+    iabbrev WHen When
+    iabbrev HOw How
+    iabbrev WHy Why
 set background=light
 " Hit `Ctrl-k` then type `el` to produce an ellipsis
     dig el 8230
