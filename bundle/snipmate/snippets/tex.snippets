@@ -48,6 +48,10 @@ snippet subp
 # Emphasis
 snippet em
 	\emph{${1}}${2}
+# School header
+snippet sh
+	\schoolheader{${1:title}}{${2:name}}{${3:teacher}, ${4:period}}{${5:date}}
+	${6}
 # Strong
 snippet st
 	\strong{${1}}${2}
@@ -115,6 +119,16 @@ snippet table
 	${3}
 	\end{tabular}
 	\end{table}
+snippet hl
+	\hline
+snippet SI
+	\SI{${1}}{${2}}${3}
+snippet si
+	\si{${1}}${2}
+snippet num
+	\num{${1}}${2}
+snippet bi
+	\bibitem{${1:label}}${2}
 snippet figure
 	\begin{figure}[H]
 	\caption{${1}}

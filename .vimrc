@@ -151,8 +151,21 @@ set modelines=0
     iabbrev WHen When
     iabbrev HOw How
     iabbrev WHy Why
+    iabbrev THis This
+    iabbrev RIce Rice
+    iabbrev countires countries
+    iabbrev governmetn government
+    iabbrev minumum minimum
+    iabbrev dependece dependence
 set background=light
-" Hit `Ctrl-k` then type `el` to produce an ellipsis
+" Custom digraphs
+    " Use Python's ord("⟨char⟩") for the integer values of the
+    " characters.
     dig el 8230
+        " Hit `Ctrl-k` then type `el` to produce an ellipsis
+    dig (< 10216
+        " ⟨
+    dig )> 10217
+        " ⟩
 " Type `:Clip` to load the current file into the clipboard
     command Clip :!cat % | xclip -sel clip
