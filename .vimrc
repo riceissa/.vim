@@ -152,6 +152,7 @@ set modelines=0
     iabbrev HOw How
     iabbrev WHy Why
     iabbrev THis This
+    iabbrev THere There
     iabbrev RIce Rice
     iabbrev countires countries
     iabbrev governmetn government
