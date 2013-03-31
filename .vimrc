@@ -71,6 +71,11 @@ set modelines=0
         nnoremap <leader>m i\(<Esc>Ea\)<Esc>
         nnoremap _ :bp<CR>
         nnoremap <leader>T :call ToggleTextWidth()<CR>
+        vnoremap fmt <Esc>:set textwidth=72<CR>gvgq<Esc>:set textwidth=0<CR>
+            " Format visually selected region to be up to 72 characters.
+            " Possible source of headaches: running this will set the
+            " textwidth to 0 at the end, i.e., it will ignore the
+            " original value for textwidth.
     " Windows
         nnoremap <C-h> <C-w>h
         nnoremap <C-j> <C-w>j
