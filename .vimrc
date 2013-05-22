@@ -126,6 +126,8 @@ set modelines=0
         autocmd filetype tex nnoremap <buffer> <silent> <localleader>xe :!xelatex %<CR>
         autocmd filetype tex nnoremap <buffer> <silent> <localleader>ja :!platex % ; dvipdfmx -f /usr/share/texlive/texmf-dist/fonts/map/dvipdfmx/jfontmaps/otf-ipaex.map %:r.dvi<CR>
         autocmd filetype tex nnoremap <buffer> <silent> <localleader>jp :!platex % ; dvipdfmx -f /usr/share/texlive/texmf-dist/fonts/map/dvipdfmx/jfontmaps/otf-ipaex.map %:r.dvi<CR>
+        " Make visually selected region be mathematically typeset.
+        autocmd filetype tex vnoremap <buffer> <silent> ma <esc>`>a\)<esc>`<i\(<esc>
     augroup END
 " Markdown options
     au BufNewFile,BufRead *.md set filetype=markdown
@@ -158,11 +160,13 @@ set modelines=0
     iabbrev WHy Why
     iabbrev THis This
     iabbrev THere There
+    iabbrev THey They
     iabbrev RIce Rice
     iabbrev countires countries
     iabbrev governmetn government
     iabbrev minumum minimum
     iabbrev dependece dependence
+    iabbrev smae same
 set background=light
 " Custom digraphs
     " Use Python's ord("⟨char⟩") for the integer values of the
