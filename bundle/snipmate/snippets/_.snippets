@@ -6,10 +6,14 @@ snippet c)
 snippet date
 	`strftime("%Y-%m-%d")`
 snippet ddate
-	`strftime("%B %d, %Y")`
+	`strftime("%B %-d, %Y")`
 snippet paperdate
 	`strftime("%-d %B %Y")`
 snippet time
-	`strftime("%T")`
+	`strftime("%T (%Z)")`
 snippet datetime
-	`strftime("%Y-%m-%d@%T")`
+	`strftime("%Y-%m-%d @ %T (%Z)")`
+snippet "
+	“${1}”${2}
+snippet '
+	‘${1}’${2}
