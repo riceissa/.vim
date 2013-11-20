@@ -1,7 +1,12 @@
-# LaTeX
+# LaTeX using MathJax
 snippet ma
-	$latex ${1}$${2}
+	\(${1}\)${2}
 snippet mal
+	\[${1}\]${2}
+# LaTeX on Wordpress
+snippet wpma
+	$latex ${1}$${2}
+snippet wpmal
 	$latex \displaystyle ${1}$${2}
 # Bold
 snippet bf
@@ -11,11 +16,30 @@ snippet em
 	<em>${1}</em>${2}
 # Blockquote
 snippet bq
-	<blockquote>${1}</blockquote>${2}
+	<blockquote>
+	${1}
+	</blockquote>${2}
 snippet quote
-	<blockquote>${1}</blockquote>${2}
+	<blockquote>
+	${1}
+	</blockquote>${2}
+snippet quotation
+	<blockquote>
+	${1}
+	</blockquote>${2}
+snippet code
+	<code>${1}</code>${2}
+snippet img
+	<img src="${1}" />${2}
+snippet license
+	<h2 id="license">License</h2>
+	<p>This document is licensed under the CC0 1.0 Universal license (“Public Domain Dedication”). That is, “[y]ou can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.” See <a href="https://creativecommons.org/publicdomain/zero/1.0/">the license page</a> for more information, including the full text of the license.</p>
+snippet ja
+	<span lang="ja">${1}</span>${2}
 # href
 snippet href
+	<a href="${1:url}">${2:text}</a>${3}
+snippet link
 	<a href="${1:url}">${2:text}</a>${3}
 # p
 snippet p
@@ -208,8 +232,8 @@ snippet input
 	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
 snippet label
 	<label for="${2:$1}">${1:name}</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="${5}" id="${6:$2}"`Close()`>${7}
-snippet link
-	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}
+#snippet link
+#	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}
 snippet mailto
 	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
 snippet meta
@@ -240,6 +264,24 @@ snippet header
 	</head>
 	<body>
 		<h1>$1</h1>
-		${3}
+		${2}
 	</body>
 	</html>
+snippet begin
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>${1:title}</title>
+	</head>
+	<body>
+		<h1>$1</h1>
+		${2}
+	</body>
+	</html>
+snippet url
+	⟨<a href="${1:url}">$1</a>⟩
+snippet key
+	<span class="key">${1}</span>${2}
+snippet program
+	<span class="program-name">${1}</span>${2}
