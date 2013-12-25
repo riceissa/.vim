@@ -1,4 +1,4 @@
-## Date
+# Date
 snippet texdate
 	\formatdate{${1:dd}}{${2:mm}}{${3:yyyy}}${4}
 ## For dialogue
@@ -66,8 +66,9 @@ snippet em
 	\emph{${1}}${2}
 # School header
 snippet sh
-	\schoolheader{${1:title}}{${2:name}}{${3:teacher}, ${4:period}}{${5:date}}
-	${6}
+	\schoolheader{${1:title}}{${2:name}}{${3:teacher}, ${4:period}}{`strftime("%-d %B %Y")`}
+	
+	${5}
 # Strong
 snippet st
 	\strong{${1}}${2}
