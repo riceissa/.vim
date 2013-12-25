@@ -5,11 +5,6 @@ snippet textoday
 	\formatdate{`strftime("%d")`}{`strftime("%m")`}{`strftime("%Y")`}${1}
 snippet texdatetime
 	\formatdate{`strftime("%d")`}{`strftime("%m")`}{`strftime("%Y")`} at \formattime{`strftime("%H")`}{`strftime("%M")`}{`strftime("%S")`}~(`strftime("%Z")`)${1}
-## For dialogue
-snippet dia
-	\dialogue{${1}}${2}
-snippet sp
-	\speaks{${1}}{${2}}${3}
 ## href
 snippet href
 	\href{${1:url}}{${2:text}}
@@ -308,3 +303,21 @@ snippet proof
 	\begin{proof}
 	${1}
 	\end{proof}
+# Transitions
+snippet ts
+	\threestars
+snippet shift
+	\shift
+## For dialogue
+snippet dia
+	\dialogue{${1}}${2}
+snippet sp
+	\speaks{${1}}{${2}}${3}
+snippet heading
+	\heading{${1}}{\formatdate{`strftime("%d")`}{`strftime("%m")`}{`strftime("%Y")`}}
+	
+	${2}
+snippet header
+	\heading{${1}}{\formatdate{`strftime("%d")`}{`strftime("%m")`}{`strftime("%Y")`}}
+	
+	${2}
