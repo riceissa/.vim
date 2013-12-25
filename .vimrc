@@ -59,6 +59,14 @@ set modelines=0
                 echom "textwidth is now 0"
             endif
         endfunction
+        function ToggleRead()
+            if &linebreak ==# "nolinebreak"
+                set linebreak nolist
+            else
+                set nolinebreak list
+            endif
+        endfunction
+        nnoremap <leader>R :call ToggleRead()<CR>
         nnoremap <leader>sp :call ToggleSpell()<CR>
         "nnoremap <leader>sp :set spell! spell?<CR>
         nnoremap <leader>W :set wrap! wrap?<CR>
