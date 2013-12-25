@@ -1,6 +1,10 @@
 # Date
 snippet texdate
 	\formatdate{${1:dd}}{${2:mm}}{${3:yyyy}}${4}
+snippet textoday
+	\formatdate{`strftime("%d")`}{`strftime("%m")`}{`strftime("%Y")`}${1}
+snippet texdatetime
+	\formatdate{`strftime("%d")`}{`strftime("%m")`}{`strftime("%Y")`} at \formattime{`strftime("%H")`}{`strftime("%M")`}{`strftime("%S")`}~(`strftime("%Z")`)${1}
 ## For dialogue
 snippet dia
 	\dialogue{${1}}${2}
