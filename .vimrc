@@ -64,6 +64,7 @@ set modelines=0
         nnoremap <leader>W :set wrap! wrap?<CR>
         nnoremap <silent> <leader>ev :tabnew $MYVIMRC<CR>
         nnoremap <leader>sv :source $MYVIMRC<CR>
+        nnoremap <silent> <leader>es :tabnew ~/.vim/bundle/snipmate/snippets/<CR>
         nnoremap <silent> <leader>t :NERDTreeToggle<CR>
         nnoremap <leader>u :GundoToggle<CR>
         nnoremap <leader>" viw<Esc>a"<Esc>hbi"<Esc>lel
