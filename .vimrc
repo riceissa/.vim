@@ -190,3 +190,7 @@ set background=light
         " ⟩
 " Type `:Clip` to load the current file into the clipboard
     command Clip :!cat % | xclip -sel clip
+
+if has('gui_running')
+    colorscheme solarized
+endif
