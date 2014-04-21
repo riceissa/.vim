@@ -27,29 +27,18 @@ set modelines=0
         nnoremap <silent> <leader>N :set number!<CR>
         nnoremap <leader>p :set paste! paste?<CR>
         function ToggleSpell()
-            if &spell ==# "nospell"
-                syntax off
-                set spell
-                echom "spelling is now on; syntax disabled"
-            else
+            " See http://stackoverflow.com/q/23125636/3422337 for more
+            " information on how this works
+            if &spell
                 set nospell
                 syntax on
-                echom "spelling is now off; syntax enabled"
+                echom "spelling was on ... turning off; syntax enabled"
+            else
+                set spell
+                syntax off
+                echom "spelling was off ... turning on; syntax disabled"
             endif
         endfunction
-        " For some reason, the above works, but this one doesn't (even
-        " when the string below is changed to just "spell").
-        "function ToggleSpell()
-            "if &spell ==# "spell"
-                "set nospell
-                "syntax on
-                "echom "spelling was on ... turning off"
-            "else
-                "syntax off
-                "set spell
-                "echom "spelling was off ... turning on"
-            "endif
-        "endfunction
         function ToggleTextWidth()
             if &textwidth ==# 0
                 set textwidth=72
@@ -178,6 +167,7 @@ set modelines=0
     iabbrev minumum minimum
     iabbrev dependece dependence
     iabbrev smae same
+    iabbrev THus Thus
 set background=light
 " Custom digraphs
     " Use Python's ord("⟨char⟩") for the integer values of the
