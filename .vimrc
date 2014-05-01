@@ -64,6 +64,9 @@ set modelines=0
         nnoremap <silent> <leader>es :tabnew ~/.vim/bundle/snipmate/snippets/<CR>
         nnoremap <silent> <leader>t :NERDTreeToggle<CR>
         nnoremap <leader>u :GundoToggle<CR>
+        nnoremap <leader>cd :lcd %:p:h<CR>
+            " Change local directory to current file's location
+            " directory
         nnoremap <leader>" viw<Esc>a"<Esc>hbi"<Esc>lel
         nnoremap <leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
         nnoremap <leader>m i\(<Esc>Ea\)<Esc>
@@ -184,3 +187,7 @@ set background=light
 if has('gui_running')
     colorscheme solarized
 endif
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
