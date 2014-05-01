@@ -34,3 +34,6 @@
 [submodule "bundle/signature"]
 	path = bundle/signature
 	url = git@github.com:kshenoy/vim-signature.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
