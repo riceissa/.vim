@@ -28,3 +28,15 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
+[submodule "bundle/unite"]
+	path = bundle/unite
+	url = git@github.com:Shougo/unite.vim.git
+[submodule "bundle/autoclose"]
+	path = bundle/autoclose
+	url = git@github.com:Townk/vim-autoclose.git
+[submodule "bundle/signature"]
+	path = bundle/signature
+	url = git@github.com:kshenoy/vim-signature.git
